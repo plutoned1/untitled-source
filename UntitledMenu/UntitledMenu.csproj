@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDA028F1-2978-4895-AF2A-D10BE735F768}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UntitledMenu</RootNamespace>
+    <AssemblyName>UntitledMenu</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="BepInEx" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Photon3Unity3D" />
+    <Reference Include="PhotonRealtime" />
+    <Reference Include="PhotonUnityNetworking" />
+    <Reference Include="PhotonUnityNetworking.Utilities" />
+    <Reference Include="PlayFab" />
+    <Reference Include="SteamVR" />
+    <Reference Include="SteamVR_Actions" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Unity.Burst" />
+    <Reference Include="Unity.InputSystem" />
+    <Reference Include="Unity.RenderPipelines.Core.Runtime" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+    <Reference Include="UnityEngine.VRModule" />
+    <Reference Include="UnityEngine.XRModule" />
+    <Reference Include="UntitledPlugin" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KeyAuthManager.cs" />
+    <Compile Include="KeyAuth\api.cs" />
+    <Compile Include="KeyAuth\encryption.cs" />
+    <Compile Include="KeyAuth\json_wrapper.cs" />
+    <Compile Include="Loading\Loader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="untitled\Assets\AssetLoader.cs" />
+    <Compile Include="Untitled\Auth\Auth.cs" />
+    <Compile Include="Untitled\Auth\Checks.cs" />
+    <Compile Include="untitled\Cheat\Client.cs" />
+    <Compile Include="untitled\Cheat\Gamemode.cs" />
+    <Compile Include="untitled\Cheat\Global.cs" />
+    <Compile Include="untitled\Cheat\Master.cs" />
+    <Compile Include="untitled\Cheat\Movement.cs" />
+    <Compile Include="untitled\Cheat\Overpowered.cs" />
+    <Compile Include="untitled\Cheat\Settings.cs" />
+    <Compile Include="untitled\Cheat\Visual.cs" />
+    <Compile Include="untitled\Core\Button.cs" />
+    <Compile Include="untitled\Core\ButtonCollider.cs" />
+    <Compile Include="untitled\Core\Buttons.cs" />
+    <Compile Include="untitled\Core\ClampColor.cs" />
+    <Compile Include="untitled\Core\ColorChanger.cs" />
+    <Compile Include="untitled\Core\Extensions\PhotonManager.cs" />
+    <Compile Include="untitled\Core\Menu.cs" />
+    <Compile Include="untitled\Core\Patches\AnalyticsPatch.cs" />
+    <Compile Include="untitled\Core\Patches\GameObjectPatch.cs" />
+    <Compile Include="untitled\Core\Patches\GorillanalyticsStart.cs" />
+    <Compile Include="untitled\Core\Patches\JoinPatch.cs" />
+    <Compile Include="untitled\Core\Patches\LeavePatch.cs" />
+    <Compile Include="untitled\Core\Patches\LegalAgreementsBypass.cs" />
+    <Compile Include="untitled\Core\Patches\NoAttributeInstall.cs" />
+    <Compile Include="untitled\Core\Patches\NoDeviceInfo.cs" />
+    <Compile Include="untitled\Core\Patches\NoDeviceInfo1.cs" />
+    <Compile Include="untitled\Core\Patches\NoDeviceInfo2.cs" />
+    <Compile Include="untitled\Core\Patches\NoDoAttributeInstall.cs" />
+    <Compile Include="untitled\Core\Patches\NoGetAdvertIdFromUnity.cs" />
+    <Compile Include="untitled\Core\Patches\NoGracePeriod.cs" />
+    <Compile Include="untitled\Core\Patches\NoGracePeriod2.cs" />
+    <Compile Include="untitled\Core\Patches\NoGracePeriod3.cs" />
+    <Compile Include="untitled\Core\Patches\NoGracePeriod4.cs" />
+    <Compile Include="untitled\Core\Patches\NoInitializeScreenTimeTracker.cs" />
+    <Compile Include="untitled\Core\Patches\NoReportPlayer.cs" />
+    <Compile Include="untitled\Core\Patches\PlayFabReportPatch2.cs" />
+    <Compile Include="untitled\Core\Patches\RigPatch.cs" />
+    <Compile Include="untitled\Core\Patches\TOSPatch.cs" />
+    <Compile Include="untitled\Core\PCGUI.cs" />
+    <Compile Include="untitled\Core\Scripts\Boards.cs" />
+    <Compile Include="Untitled\Core\Scripts\ElfManager.cs" />
+    <Compile Include="Untitled\Core\Scripts\ElfType.cs" />
+    <Compile Include="untitled\Core\Scripts\Ghost.cs" />
+    <Compile Include="untitled\Core\Scripts\Input.cs" />
+    <Compile Include="untitled\Core\Scripts\Notifications.cs" />
+    <Compile Include="Untitled\Core\Scripts\PluginButtonInfo.cs" />
+    <Compile Include="Untitled\Core\Scripts\PluginManager.cs" />
+    <Compile Include="Untitled\Core\Scripts\UpdateBasedElfsManager.cs" />
+    <Compile Include="untitled\Core\TimedBehaviour.cs" />
+    <Compile Include="untitled\Core\Utilities\Coroutines.cs" />
+    <Compile Include="untitled\Core\Utils\Util.cs" />
+    <Compile Include="untitled\Initializer.cs" />
+    <Compile Include="untitled\Libs\GunLib.cs" />
+    <Compile Include="untitled\Libs\TeleportLib.cs" />
+    <Compile Include="untitled\Plugin.cs" />
+    <Compile Include="untitled\PluginInfo.cs" />
+    <Compile Include="untitled\Utilities\RigShit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="untitled\Assets\customclick1.wav" />
+    <EmbeddedResource Include="untitled\Assets\customclick2.wav" />
+    <EmbeddedResource Include="untitled\Assets\customclick3.wav" />
+    <EmbeddedResource Include="untitled\Assets\HaveFun.wav" />
+    <EmbeddedResource Include="untitled\Assets\menuclose.wav" />
+    <EmbeddedResource Include="untitled\Assets\menuopen.wav" />
+    <EmbeddedResource Include="untitled\Assets\minecraftclick.wav" />
+    <EmbeddedResource Include="untitled\Assets\steal.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
